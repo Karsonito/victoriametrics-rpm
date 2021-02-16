@@ -1,5 +1,5 @@
 Name:    victoriametrics
-Version: 1.50.1
+Version: 1.50.2
 Release: 2
 Summary: The best long-term remote storage for Prometheus
 
@@ -57,7 +57,7 @@ cp victoria-metrics-prod %{buildroot}%{_bindir}/victoria-metrics-prod
 %endif
 
 %files
-/etc/default/victoriametrics.conf
+%config /etc/default/victoriametrics.conf
 %{_bindir}/victoria-metrics-prod
 %dir %attr(0775, victoriametrics, victoriametrics) /var/lib/victoria-metrics-data
 %if %{use_systemd}
